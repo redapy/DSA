@@ -2,7 +2,7 @@
 Task: Check whether a given directed graph with 𝑛 vertices and 𝑚 edges contains a cycle.
 Input Format: first line contain the number vertices n and edges m. The next lines contains two vertices u
 and v of the graph
-Constraints: 1 ≤ 𝑛 ≤ 103, 0 ≤ 𝑚 ≤ 103.
+Constraints: 1 ≤ 𝑛 ≤ 10^3, 0 ≤ 𝑚 ≤ 10^3.
 Output Format. Output 1 if the graph contains a cycle and 0 otherwise.
 */
 const readline = require("readline");

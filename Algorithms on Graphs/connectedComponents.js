@@ -41,10 +41,10 @@ const depthFirstSearch = (edges, numVertices) => {
 
   let ccNum = 0;
   for (let i = 1; i <= numVertices; i++) {
-    const vertice = adjsList[i];
-    if (!vertice.isVisited) {
+    const vertex = adjsList[i];
+    if (!vertex.isVisited) {
       explore(adjsList, i, ccNum);
-      //increase the number of connected components after visiting all the connected vertices to the starting vertice
+      //increase the number of connected components after visiting all the connected vertices to the starting vertex
       ccNum++;
     }
   }
@@ -78,11 +78,11 @@ const makeAdjList = (edges, n) => {
   return adjsList;
 };
 
-const explore = (adjsList, vertice, ccNum) => {
+const explore = (adjsList, vertex, ccNum) => {
   // Mark the current vertex as visited
-  adjsList[vertice].isVisited = true;
+  adjsList[vertex].isVisited = true;
 
-  const neighbours = adjsList[vertice].neighbours;
+  const neighbours = adjsList[vertex].neighbours;
   // Explore all neighbors recursively
   for (const neighbour of neighbours) {
     if (!adjsList[neighbour].isVisited) {
