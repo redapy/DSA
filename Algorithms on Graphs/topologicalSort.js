@@ -47,7 +47,7 @@ const topoSort = (edges, numVertices) => {
   const adjList = makeAdjList(edges, numVertices);
   let postvisit = 0;
 
-  // helper function to explore the graph using DFS
+  // Helper function to explore the graph using DFS
   const explore = (vertex) => {
     adjList[vertex].isVisited = true;
     const neighbours = adjList[vertex].neighbours;
@@ -94,7 +94,7 @@ const makeAdjList = (edges, numVertices) => {
     adjList[u].neighbours.push(v);
   }
 
-  // Add vertices without neighbors (isolated vertices) to the adjacency list
+  // Add vertices without neighbours (isolated vertices) to the adjacency list
   for (let i = 1; i <= numVertices; i++) {
     addVertex(i);
   }
